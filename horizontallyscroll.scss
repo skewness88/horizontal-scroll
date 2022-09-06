@@ -1,0 +1,52 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    
+.container{
+    height:100%;
+    width:100%;
+    scroll-snap-type: both mandatory;
+    overflow:scroll;
+    display: flex;
+
+    section{
+        flex: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        scroll-snap-align: start;
+
+        &:nth-of-type(1){
+            background-color: lightpink;
+            color: white;
+        }
+
+        &:nth-of-type(2){
+            background-color: lightgrey;
+            color: white;
+        }
+
+        &:nth-of-type(3){
+            background-color: lightseagreen;
+            color: white;
+        }
+
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15em;
+        }
+        
+
+    }
+
+    
+}
+
+}
+
+

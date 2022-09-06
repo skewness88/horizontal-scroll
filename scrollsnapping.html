@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="horizontallyscroll.css"> 
+    <link rel="stylesheet" href="slider.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    </script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js">
+    </script>
+    <title>Horizontal Scroll</title>
+</head>
+<body>
+    <div class="main-container">
+        <nav class="main-nav">
+            <ul class="ul_first">
+                <li id="logo">
+                    <a href="#"><img src="images/logo2.svg"  class="logo-img"></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#section1">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2">About </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section3">Contact</a>
+                </li>
+             
+            </ul>
+        </nav>
+      
+    </div>
+
+        <div class="container">
+            <section id="section1"> 
+                <div class="container2">
+                    <div class="container-images">
+                        <div class="image"><img class="one" src="images/g1.png"></div>
+                        <div class="image"><img class="two" src="images/g2.png"></div>
+                        <div class="image"><img class="three" src="images/g3.png"></div>
+                        <div class="image"><img class="four" src="images/g4.png"></div>
+                        <div class="image"><img class="five" src="images/g5.png"></div>
+                        <div class="image"><img class="six" src="images/g6.png"></div>
+                        <div class="image"><img class="seven" src="images/g7.png"></div>
+                        <div class="image"><img class="eight" src="images/g8.png"></div>
+                        <div class="image"><img class="nine" src="images/g9.png"></div> 
+                    </div> 
+
+                    <div class="popup-image">
+                        <span>&times;</span>
+                        <img src="images/g1.png" alt="">
+                    </div>
+
+                </div>
+
+            </section>        
+            <section id="section2">  
+                <div class="about-content">
+                    <div class="about-data">
+                        <h1 class="about-title">Lorem Ipsum</h1>
+                        <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                        <a href="#section3" class="button">Contact Me</a>
+                    </div>
+                    <div class="line-middle">
+
+                    </div>
+                    <div class="oni-image">
+                        <img class="oni" src="images/oni.png">
+                    </div>
+                </div>
+             
+            </section>
+            <section id="section3">  
+                <form action="">
+                    <div class="title">
+                      <h2>CONTACT</h2>
+                    </div>
+                    <div class="half">
+                      <div class="item">
+                        <label for="name">NAME</label>
+                        <input type="text" id = "name">
+                      </div>
+                      <div class="item">
+                        <label for="email">EMAIL</label>
+                        <input type="text" id = "email">
+                      </div>
+                    </div>
+                    <div class="full">
+                      <label for="message">MESSAGE</label>
+                      <textarea name="" id = "message"></textarea>
+                    </div>
+                    <div class="action">
+                      <input type="submit" value = "SEND MESSAGE">
+                      <input type="reset" value = "RESET">
+                    </div>
+                    <div class="icons">
+                      <a href="" class = "fa fa-twitter"></a>
+                      <a href="" class = "fa fa-facebook"></a>
+                      <a href="" class = "fa fa-instagram"></a>
+                      <a href="" class = "fa fa-github"></a>
+                    </div>
+                  </form>
+            </section>
+        </div>
+
+</body>
+<script>
+
+
+document.querySelectorAll('.container-images img').forEach(image =>{
+    image.onclick = () => {
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src = image.getAttribute('src');
+}
+
+});
+
+document.querySelector('.popup-image span').onclick = () =>{
+    document.querySelector('.popup-image').style.display = 'none';
+
+}
+
+    
+$(document).ready(function () {
+    $("ul.navbar-nav > li").click(function (e) {
+    $("ul.navbar-nav > li").removeClass("active");
+    $(this).addClass("active");
+    });
+    });
+
+
+</script>
+</html>

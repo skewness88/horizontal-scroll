@@ -1,0 +1,374 @@
+html{
+  background-color: rgb(18, 18, 23);
+
+ }
+
+ .html,body,.main-container,.container{
+  scroll-behavior: smooth;
+ }
+
+body {
+  background: url("images/1.png") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  
+ }
+
+body .container {
+  height: 100%;
+  width: 100%;
+  -ms-scroll-snap-type: both mandatory;
+      scroll-snap-type: both mandatory;
+  overflow: scroll;
+  display: flex;
+}
+body .container section {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+body .container section:nth-of-type(1) {
+  color: white;
+}
+body .container section:nth-of-type(2) {
+  color: white;
+}
+body .container section:nth-of-type(3) {
+  color: white;
+}
+body .container section h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}/*# sourceMappingURL=horizontallyscroll.css.map */
+
+li{
+  position: relative;
+  list-style: none;
+  transition: cubic-bezier(.5,0,.18,1) 1s;
+ }
+
+ .nav-item a:hover {
+  -moz-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-item::after {
+  content: '';
+  display: block;
+  width: 0;
+  position:absolute;
+  left:50%;
+  height: 1px;
+  background:rgb(253, 55, 55);
+  transition: cubic-bezier(.77,0,.18,1) 1s;
+}
+
+
+ .nav-link{
+  text-decoration: none;
+  color: bisque;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  
+ }
+
+
+.main-nav{
+  position: fixed;
+  display: flex;
+  padding: 1em 2em;
+ }
+
+ 
+ .main-nav .navbar-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-left: 40px;
+ }
+
+ .main-container{
+
+ }
+
+ .body{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+ }
+
+
+ .logo-img{
+  /* position: fixed; */
+  height: 100px;
+  margin: 20px auto;
+  left: 40px;
+  
+ }
+
+ .navbar-nav > .active > a {
+  color: rgb(253, 55, 55);
+}
+
+.container-images{
+  display: grid;
+  grid-template-columns:repeat(6, 1fr) ;
+  grid-auto-rows: minmax(150px,auto);
+  grid-gap: 10px;
+  max-width: 1700px;
+  height: 800px;
+  margin-top: 90px;
+  padding: 8px;
+
+}
+
+.container-images .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  transition: .5s;
+  overflow: hidden;
+}
+
+.container-images .image img:hover{
+  transform: scale(1.2);
+  object-fit: cover;
+  margin: 0;
+}
+
+.container-images div{
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container-images div:nth-of-type(1){
+  grid-column:1/3;
+  grid-row: 1/3;
+}
+
+
+.container2 .popup-image{
+  position: fixed;
+  top: 0; left: 0;
+  background-color: rgba(0, 0, 0, .9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.container2 .popup-image span{
+  position: absolute;
+  top: 0; right: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.container2 .popup-image img{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 10px;
+  width: 750px;
+  object-fit: cover;
+}
+
+.about-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin: 350px auto;
+
+
+}
+
+.about-title{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: bisque;
+  font-size: 3rem;
+}
+
+.description{
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 25px;
+  word-spacing: 5px;
+  text-align: center;
+  color:bisque;
+}
+
+.button{
+  margin-top: 40px;
+  display: inline-block;
+  background-color: rgb(159, 31, 31);
+  color: bisque;
+  padding: 1rem;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.button:hover{
+  background-color: rgb(245, 46, 46);
+  border-color: transparent;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+
+}
+
+.about-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line-middle{
+  background-color: bisque;
+  width: 1px;
+  height: 500px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.oni{
+  height: 900px;
+}
+
+.oni-image{
+}
+
+form{
+  width: 640px;
+  margin: 200px auto;
+  max-width: 97%;
+  border-radius: 4px;
+  padding: 55px 30px;
+}
+
+form .title h2{
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 6px;
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+}
+
+form .half{
+  display: flex;
+  justify-content: space-between;
+}
+
+form .half .item{
+  display: flex;
+  color: white;
+  flex-direction: column;
+  margin-bottom: 24px;
+  width: 45%;
+}
+
+form label{
+  display: block;
+  font-size: 13px;
+  letter-spacing: 3.5px;
+  margin-bottom: 16px;
+}
+
+form .half .item input{
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid white;
+  outline: 0;
+  padding: 16px;
+  width: 100%;
+  height: 44px;
+  background: transparent;
+  font-size: 17px;
+}
+
+form .full{
+  color: white;
+  margin-bottom: 24px;
+}
+
+form .full textarea{
+  color: white;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid white;
+  outline: 0;
+  padding: 12px 16px;
+  width: 100%;
+  height: 200px;
+  font-size: 17px;
+}
+
+form .action{
+  margin-bottom: 32px;
+}
+
+form .action input{
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  height: 44px;
+  letter-spacing: 3px;
+  outline: 0;
+  padding: 0 20px 0 22px;
+  margin-right: 10px;
+}
+
+form .icons a{
+  border: 1px solid white;
+  border-radius: 50%;
+  line-height: 36px;
+  text-align: center;
+  font-weight: 600;
+  width: 38px;
+  margin-right: 10px;
+}
+
+form .action input[type="reset"]:hover,form .action input[type="submit"]:hover, form .icons a:hover{
+  background: rgba(245, 46, 46,0.5);
+}
+
+
+@media (max-width:768px){
+  .container2 .popup-image img{
+    width: 95%;
+  }
+}
